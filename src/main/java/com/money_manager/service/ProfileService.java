@@ -43,7 +43,14 @@ public class ProfileService {
         String activationLink=activationUrl+"/api/v1.0/activate?token="+newProfile.getActivationToken();
         String subject="Activate your money Manager Account";
         String emailBody="Click on the activation link and activate your account: "+activationLink;
-        emailService.sendMail(newProfile.getEmail(),subject,emailBody);
+       // emailService.sendMail(newProfile.getEmail(),subject,emailBody);
+        try {
+            emailService.sendMail(newProfile.getEmail(), subject, emailBody);
+        } catch (Exception e) {
+//            log.error("Email failed but user registered", e);
+            
+        }
+
 
         return toDto(newProfile);
 
