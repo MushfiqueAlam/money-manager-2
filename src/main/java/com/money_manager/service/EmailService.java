@@ -17,6 +17,7 @@ public class EmailService {
     private final String fromEmail = "mushfique1213@gmail.com";
 
     @Async
+
     public void sendMail(String to, String subject, String body) {
 
         MimeMessage mimeMessage = mailSender.createMimeMessage();

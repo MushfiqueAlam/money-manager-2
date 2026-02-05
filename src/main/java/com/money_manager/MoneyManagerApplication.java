@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
 @SpringBootApplication
-@EnableAsyncg
+@EnableAsync
 public class MoneyManagerApplication {
 
 	public static void main(String[] args) {
